@@ -1,4 +1,5 @@
 from halo.controllers.view import HaloView
+from halo.controllers.hello_world import HelloWorldView
 
 class HaloRoutes():
     """

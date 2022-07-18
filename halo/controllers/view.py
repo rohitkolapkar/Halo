@@ -1,10 +1,9 @@
-import asyncio
 from aiohttp import web
 
 
 class HaloView(web.View):
 
-    # derived class will provide service amd service_disatch  details
+    # derived class will provide service
     _service = None
 
     # common routes to used by subclass
