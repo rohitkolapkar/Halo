@@ -18,9 +18,11 @@ class HelloWorldView(HaloView):
     async def post(self):
         schema = HelloWorldPostSchema()
         request_body = schema.load(await self.request.json(), unknown='EXCLUDE')
+        # NOTE: Unable to call CSM errors outside of CSM
+        # Error Handling using CSM common erros is not possible.
         # try:
         #     schema = HelloWorldPostSchema()
-        #     request_bod = schema.load(await self.request.json(), unknown='EXCLUDE')
+        #     request_body = schema.load(await self.request.json(), unknown='EXCLUDE')
         # except json.decoder.JSONDecodeError:
         #     raise InvalidRequest(const.JSON_ERROR)
         # except ValidationError as val_err:
