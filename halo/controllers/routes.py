@@ -1,5 +1,6 @@
 from halo.controllers.view import HaloView
-from halo.controllers.hello_world import HelloWorldView
+from halo.controllers.buckets import BucketsView
+
 
 class HaloRoutes():
     """

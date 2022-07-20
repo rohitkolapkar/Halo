@@ -9,7 +9,8 @@ setup(name='Halo',
       description='Halo Management Plugin',
       package_dir={'halo': 'halo'},
       packages=['halo', 'halo.controllers',
-                'halo.services'
+                'halo.services', 'halo.plugins',
+                'halo.commons'
                 ],
       zip_safe=False,
       python_requires='>=3.6')
