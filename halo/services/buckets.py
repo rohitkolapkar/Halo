@@ -34,5 +34,5 @@ class BucketsService():
                 "http_response":err.status_code
             }
         return {
-            "message":f"bucket created: {const.BUCKET_NAME}"
+            "message":f"bucket created: {bucket_name}"
         }
