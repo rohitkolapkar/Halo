@@ -1,6 +1,6 @@
 from halo.controllers.view import HaloView
 from halo.controllers.buckets import BucketsView
-
+from halo.controllers.iam_users import IAMUsersView
 
 class HaloRoutes():
     """

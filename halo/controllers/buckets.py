@@ -6,7 +6,7 @@ from halo.commons import const
 class MakeBucketSchema(Schema):
     bucket_name  = fields.Str(data_key=const.BUCKET_NAME, required=True)
     location = fields.Str(data_key=const.LOCATION, allow_none=False)
-    object_lock = fields.Str(data_key=const.OBJECT_LOCK, allow_none=False)
+    object_lock = fields.Bool(data_key=const.OBJECT_LOCK, allow_none=False)
 
 @HaloView._app_routes.view('/api/halo/buckets')
 class BucketsView(HaloView):
@@ -15,8 +15,8 @@ class BucketsView(HaloView):
         self._service = BucketsService()
 
     async def get(self):
-        message = self._service.get()
-        return {"message" : message}
+        response = self._service.list_buckets()
+        return response
     
     async def post(self):
         schema = MakeBucketSchema()
@@ -30,5 +30,5 @@ class BucketsView(HaloView):
         #     raise InvalidRequest(const.JSON_ERROR)
         # except ValidationError as val_err:
         #     raise InvalidRequest(f"Invalid request body: {val_err}")
-        message = self._service.make_bucket(**request_body)
-        return {"message" : message}
+        response = self._service.make_bucket(**request_body)
+        return response
