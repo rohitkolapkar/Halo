@@ -1,5 +1,5 @@
 from marshmallow import Schema, fields
-from HelloWorld.controllers.view import HaloView
+from HelloWorld.controllers.view import HelloWorldView
 from HelloWorld.services.iam_users import IAMUsersService
 from HelloWorld.commons import const
 
@@ -8,8 +8,8 @@ class MakeBucketSchema(Schema):
     location = fields.Str(data_key=const.LOCATION, allow_none=False)
     object_lock = fields.Bool(data_key=const.OBJECT_LOCK, allow_none=False)
 
-@HaloView._app_routes.view('/api/halo/iam/users')
-class IAMUsersView(HaloView):
+@HelloWorldView._app_routes.view('/api/halo/iam/users')
+class IAMUsersView(HelloWorldView):
     def __init__(self, request):
         super(IAMUsersView, self).__init__(request)
         self._service = IAMUsersService()

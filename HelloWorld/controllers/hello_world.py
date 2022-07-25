@@ -1,12 +1,12 @@
 from marshmallow import Schema, fields
-from HelloWorld.controllers.view import HaloView
+from HelloWorld.controllers.view import HelloWorldView
 from HelloWorld.services.hello_world import HelloWorld
 
 class HelloWorldPostSchema(Schema):
     name  = fields.Str(data_key='name', required=True)
 
-@HaloView._app_routes.view('/api/helloworld')
-class HelloWorldView(HaloView):
+@HelloWorldView._app_routes.view('/api/helloworld')
+class HelloWorldDemo(HelloWorldView):
     def __init__(self, request):
         super(HelloWorldView, self).__init__(request)
         self._service = HelloWorld()

@@ -1,9 +1,9 @@
-from HelloWorld.controllers.view import HaloView
-from HelloWorld.controllers.hello_world import HelloWorldView
+from HelloWorld.controllers.view import HelloWorldView
+from HelloWorld.controllers.hello_world import HelloWorldDemo
 from HelloWorld.controllers.buckets import BucketsView
 from HelloWorld.controllers.iam_users import IAMUsersView
 
-class HaloRoutes():
+class HelloWorldRoutes():
     """
     Common class for adding routes
     """
@@ -13,4 +13,4 @@ class HaloRoutes():
         """
         Add routes to Web application
         """
-        app.add_routes(HaloView._app_routes)
+        app.add_routes(HelloWorldView._app_routes)
