@@ -1,7 +1,6 @@
-from minio import Minio
 from minio.error import S3Error, ServerError
-from halo.commons import const
-from halo.plugins.minio_s3 import HaloMinio
+from HelloWorld.commons import const
+from HelloWorld.plugins.minio_s3 import HaloMinio
 
 
 class BucketsService():

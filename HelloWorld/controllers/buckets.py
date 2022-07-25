@@ -1,7 +1,7 @@
 from marshmallow import Schema, fields
-from halo.controllers.view import HaloView
-from halo.services.buckets import BucketsService
-from halo.commons import const
+from HelloWorld.controllers.view import HaloView
+from HelloWorld.services.buckets import BucketsService
+from HelloWorld.commons import const
 
 class MakeBucketSchema(Schema):
     bucket_name  = fields.Str(data_key=const.BUCKET_NAME, required=True)
