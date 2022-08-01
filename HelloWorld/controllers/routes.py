@@ -1,7 +1,6 @@
 from HelloWorld.controllers.view import HelloWorldView
 from HelloWorld.controllers.hello_world import HelloWorldDemo
-from HelloWorld.controllers.buckets import BucketsView
-from HelloWorld.controllers.iam_users import IAMUsersView
+from HelloWorld.controllers.alerts import AlertsView
 
 class HelloWorldRoutes():
     """

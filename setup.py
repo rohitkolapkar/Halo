@@ -9,7 +9,7 @@ setup(name='helloworld',
       description='CSM APIs Extention Demo',
       package_dir={'HelloWorld': 'HelloWorld'},
       packages=['HelloWorld', 'HelloWorld.controllers',
-                'HelloWorld.services', 'HelloWorld.plugins',
+                'HelloWorld.services',
                 'HelloWorld.commons'
                 ],
       zip_safe=False,

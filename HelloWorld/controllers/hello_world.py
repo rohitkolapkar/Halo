@@ -14,7 +14,7 @@ class HelloWorldDemo(HelloWorldView):
     async def get(self):
         message = self._service.get()
         return {"message" : message}
-    
+
     async def post(self):
         schema = HelloWorldPostSchema()
         request_body = schema.load(await self.request.json(), unknown='EXCLUDE')
